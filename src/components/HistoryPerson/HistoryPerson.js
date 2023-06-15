@@ -55,10 +55,11 @@ const HistoryPerson = () => {
   };
 
   return (
-    <Container className="shadow p-3 mb-5 bg-white rounded mb-5">
+    <Container className="shadow p-3 mb-5 mt-5 bg-white rounded">
+      <h1 className='text-center'>History Person</h1>
       <Row className="justify-content-md-center">
         {state.map((user, index) => (
-          <Col className="shadow p-3 mb-5 bg-white rounded" md="auto" key={index}>
+          <Col className="shadow p-3 m-3 bg-white rounded" md="auto" key={index}>
             <Card style={{ width: '18rem' }}>
               <Card.Img
                 variant="top"

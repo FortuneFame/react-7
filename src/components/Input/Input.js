@@ -40,8 +40,8 @@ const Input = () => {
             Clear
           </Button>
         </div>
+        {inputValue && <p>Entered value: {inputValue}</p>}
       </Form>
-      {inputValue && <p>Entered value: {inputValue}</p>}
     </div>
   );
 };

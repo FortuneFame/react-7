@@ -15,7 +15,7 @@ const Header = () => {
       <Navbar.Brand href="#home">React</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-around">
-        <Nav className="ml-5">
+        <Nav className='shadow m-2 bg-white rounded'>
           {NavbarData.map((item, index) => (
             <Nav.Link
               key={index}
