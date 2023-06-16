@@ -7,19 +7,20 @@ import moment from 'moment';
 const Footer = () => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const updatedData = NavbarData.map((item) => ({
+  const handleClick = () => {
+    const updatedData = data.map((item) => ({
       ...item,
       id: uuidv4(),
       updatedAt: moment().format(),
     }));
-    
-    setData(updatedData);
-  }, []);
 
-  const handleClick = () => {
-    console.log(data);
+    setData(updatedData);
+    console.log(updatedData);
   };
+
+  useEffect(() => {
+    setData(NavbarData);
+  }, []);
 
   return (
     <footer className="d-flex flex-column justify-content-around mb-5 mt-4 shadow p-3 bg-white rounded">
