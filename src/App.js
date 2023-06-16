@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import moment from 'moment'; 
 
 import Header from './components/Header';
 import NavbarSwitch from './components/Header/NavbarSwitch';
@@ -17,16 +16,10 @@ const App = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
 
-  useEffect(() => {
-    if (!isNavbarOpen) {
-      console.log(`I was closed at ${moment().format()}`);
-    }
-  }, [isNavbarOpen]);
-
   return (
     <div>
       <NavbarSwitch isOpen={isNavbarOpen} onToggle={handleNavbarToggle} />
-      {isNavbarOpen && <Header onNavbarClose={() => setIsNavbarOpen(false)} />} 
+      {isNavbarOpen && <Header />} 
       <HistoryPerson />
       <Caching />
       <Input />

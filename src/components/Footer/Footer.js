@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 import { NavbarData } from '../../data';
+import moment from 'moment'; 
 
 const Footer = () => {
   const [data, setData] = useState([]);
@@ -10,9 +11,9 @@ const Footer = () => {
     const updatedData = NavbarData.map((item) => ({
       ...item,
       id: uuidv4(),
-      updatedAt: new Date(),
+      updatedAt: moment().format(),
     }));
-
+    
     setData(updatedData);
   }, []);
 
