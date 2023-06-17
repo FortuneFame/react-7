@@ -20,6 +20,9 @@ const Footer = () => {
 
   useEffect(() => {
     setData(NavbarData);
+    return () => {
+      console.log('Component will unmount');
+    }
   }, []);
 
   return (
